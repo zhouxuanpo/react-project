@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="lib/react.js"></script>
+    <script src="lib/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/babel">
+      var Mydemo = React.createClass({
+        getInitialState:function(){
+          return {
+            num:0,
+          }
+        },
+        handelClick:function(){
+          this.setState({
+            num:this.state.num + 1,
+          })
+        },
+        render:function(){
+          return(
+            <div>
+              <h1>数量：{this.state.num}</h1>
+              <button onClick={this.handelClick}>click</button>
+            </div>
+          )
+        }
+
+
+      })
+
+
+
+      ReactDOM.render(<Mydemo/>,document.getElementById("container"));
+    </script>
+  </body>
+</html>
