@@ -14,29 +14,29 @@
 
 ### app.js
 
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+        import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+        import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-class App extends React.Component {
-    getChildContext() {
-      return {muiTheme: getMuiTheme()};
-    }
-    render () {
-        return(
-            <div>
-                 <AppBar title="My AppBar" />
-            </div>
-        )
-    }
+        class App extends React.Component {
+            getChildContext() {
+              return {muiTheme: getMuiTheme()};
+            }
+            render () {
+                return(
+                    <div>
+                         <AppBar title="My AppBar" />
+                    </div>
+                )
+            }
 
-}
+        }
 
 
-App.childContextTypes = {
-  muiTheme: React.PropTypes.object.isRequired,
-};
+        App.childContextTypes = {
+          muiTheme: React.PropTypes.object.isRequired,
+        };
 
-export default App;
+        export default App;
 
 
 
