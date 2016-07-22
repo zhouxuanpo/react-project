@@ -1,12 +1,13 @@
-##  material-ui
+material-ui
+===========
 
 mui 基础设置搭建
+----------
 
-...
-npm install material-ui -D
+`npm install material-ui -D
 
 npm install  -D react-tap-event-plugin
-...			 
+`
 
 然后去   material-ui.com   找相关组件。    复制
 ...

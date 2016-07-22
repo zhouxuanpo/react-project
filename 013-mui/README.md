@@ -40,4 +40,4 @@
 
 
 
-        getChildContext() 和 App.childContextTypes       要配合使用。
+getChildContext() 和 App.childContextTypes       要配合使用。
