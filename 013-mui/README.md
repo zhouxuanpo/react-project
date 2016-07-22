@@ -41,3 +41,18 @@
 
 
 getChildContext() 和 App.childContextTypes       要配合使用。
+
+
+### 定制个人主题：
+
+        darkBaseTheme的属性是默认的，可以通过  var myTheme = {
+            palette:{
+                xxxxxxxxxxxColor:"#xxxxxx",
+                ...
+                ...
+            }
+        }
+
+来设置。
+
+或者通过console.log(darkBaseTheme.palette.xxxxxxxxxxxColor)   来显示当前的颜色
