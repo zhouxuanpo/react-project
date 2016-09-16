@@ -14,45 +14,54 @@
 
 ### app.js
 
-        import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-        import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
-        class App extends React.Component {
-            getChildContext() {
-              return {muiTheme: getMuiTheme()};
-            }
-            render () {
-                return(
-                    <div>
-                         <AppBar title="My AppBar" />
-                    </div>
-                )
-            }
-
-        }
+```
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 
-        App.childContextTypes = {
-          muiTheme: React.PropTypes.object.isRequired,
-        };
-
-        export default App;
+import injectTapEventPlugin from 'react-tap-event-plugin';
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
 
 
 
-getChildContext() 和 App.childContextTypes       要配合使用。
+class App extends React.Component {
+    getChildContext() {
+      return {muiTheme: getMuiTheme()};
+    }
+    render () {
+        return(
+            <div>
+                 <AppBar title="My AppBar" />
+            </div>
+        )
+    }
+
+}
+
+
+App.childContextTypes = {
+  muiTheme: React.PropTypes.object.isRequired,
+};
+
+export default App;
+
+```
+
+getChildContext() 和 App.childContextTypes       要配合使用。   还有injectTapEventPlugin()
 
 
 ### 定制个人主题：
 
-        darkBaseTheme的属性是默认的，可以通过  var myTheme = {
+darkBaseTheme的属性是默认的，可以通过 
+        var myTheme = {
             palette:{
                 xxxxxxxxxxxColor:"#xxxxxx",
                 ...
                 ...
             }
         }
-
 来设置。
 
 或者通过console.log(darkBaseTheme.palette.xxxxxxxxxxxColor)   来显示当前的颜色

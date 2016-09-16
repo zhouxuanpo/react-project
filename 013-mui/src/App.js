@@ -1,8 +1,9 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
+import AppBar from './component/AppBar';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Draw from './component/Draws';
 
 
 
@@ -14,7 +15,8 @@ class App extends React.Component {
     render () {
         return(
             <div>
-                 <AppBar title="My AppBar" />
+                 <AppBar />
+                 <Draw />
             </div>
         )
     }
